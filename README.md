@@ -14,7 +14,7 @@ Run external services and then debug the Java app in your IDE.
 docker-compose up wiremock redis
 ```
 
-readme# BUILD DOCKER IMAGE AGAIN
+# BUILD DOCKER IMAGE AGAIN
 ```
 docker-compose build immfly-flights
 ```
