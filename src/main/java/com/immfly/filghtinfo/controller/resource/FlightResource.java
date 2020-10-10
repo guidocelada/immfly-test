@@ -1,6 +1,7 @@
 package com.immfly.filghtinfo.controller.resource;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class FlightResource {
@@ -8,7 +9,8 @@ public class FlightResource {
     private String ident;
     private String faFlightID;
     private String airline;
-    private String airline_iata;
+    @JsonProperty("airline_iata")
+    private String airlineIata;
     private String flightnumber;
     private String tailnumber;
     private String type;
@@ -43,12 +45,12 @@ public class FlightResource {
         this.airline = airline;
     }
 
-    public String getAirline_iata() {
-        return airline_iata;
+    public String getAirlineIata() {
+        return airlineIata;
     }
 
-    public void setAirline_iata(String airline_iata) {
-        this.airline_iata = airline_iata;
+    public void setAirlineIata(String airlineIata) {
+        this.airlineIata = airlineIata;
     }
 
     public String getFlightnumber() {

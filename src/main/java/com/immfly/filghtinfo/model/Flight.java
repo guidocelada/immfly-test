@@ -1,13 +1,11 @@
 package com.immfly.filghtinfo.model;
 
-import com.immfly.filghtinfo.client.dto.AirportDTO;
-
 public class Flight {
 
     private String ident;
     private String faFlightID;
     private String airline;
-    private String airline_iata;
+    private String airlineIata;
     private String flightnumber;
     private String tailnumber;
     private String type;
@@ -42,12 +40,12 @@ public class Flight {
         this.airline = airline;
     }
 
-    public String getAirline_iata() {
-        return airline_iata;
+    public String getAirlineIata() {
+        return airlineIata;
     }
 
-    public void setAirline_iata(String airline_iata) {
-        this.airline_iata = airline_iata;
+    public void setAirlineIata(String airlineIata) {
+        this.airlineIata = airlineIata;
     }
 
     public String getFlightnumber() {

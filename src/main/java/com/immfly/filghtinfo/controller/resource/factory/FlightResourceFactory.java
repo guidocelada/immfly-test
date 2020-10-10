@@ -10,7 +10,7 @@ public class FlightResourceFactory {
         resource.setIdent(flight.getIdent());
         resource.setFaFlightID(flight.getFaFlightID());
         resource.setAirline(flight.getAirline());
-        resource.setAirline_iata(flight.getAirline_iata());
+        resource.setAirlineIata(flight.getAirlineIata());
         resource.setFlightnumber(flight.getFlightnumber());
         resource.setTailnumber(flight.getFlightnumber());
         resource.setType(flight.getType());

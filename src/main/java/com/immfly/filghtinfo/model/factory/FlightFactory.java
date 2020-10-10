@@ -10,9 +10,9 @@ public class FlightFactory {
         flight.setIdent(flightDTO.getIdent());
         flight.setFaFlightID(flightDTO.getFaFlightID());
         flight.setAirline(flightDTO.getAirline());
-        flight.setAirline_iata(flightDTO.getAirline_iata());
+        flight.setAirlineIata(flightDTO.getAirlineIata());
         flight.setFlightnumber(flightDTO.getFlightnumber());
-        flight.setTailnumber(flightDTO.getFlightnumber());
+        flight.setTailnumber(flightDTO.getTailnumber());
         flight.setType(flightDTO.getType());
         flight.setCodeshares(flightDTO.getCodeshares());
         flight.setBlocked(flightDTO.getBlocked());

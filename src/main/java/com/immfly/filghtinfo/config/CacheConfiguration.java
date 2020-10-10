@@ -25,7 +25,7 @@ import java.util.Map;
 @EnableCaching
 public class CacheConfiguration extends CachingConfigurerSupport {
 
-    private static Logger LOGGER = LoggerFactory.getLogger(CacheConfiguration.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(CacheConfiguration.class);
 
     @Value("${cache.ttl:1h}")
     private Duration ttl;

@@ -20,7 +20,6 @@ public class WebClientBuilderFactory {
      * @return a base WebClient Builder
      */
     public static WebClient.Builder generate(String baseUrl, Duration readTimeOut) {
-
         return generate(readTimeOut).baseUrl(baseUrl);
     }
 

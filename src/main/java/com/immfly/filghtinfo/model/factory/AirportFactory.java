@@ -7,10 +7,10 @@ public class AirportFactory {
 
     public static Airport fromDTO(AirportDTO dto) {
         Airport airport = new Airport();
-        airport.setAirport_name(dto.getAirport_name());
-        airport.setAirport_name(dto.getCity());
-        airport.setAirport_name(dto.getCode());
-        airport.setAirport_name(dto.getAlternate_ident());
+        airport.setAirportName(dto.getAirportName());
+        airport.setAirportName(dto.getCity());
+        airport.setAirportName(dto.getCode());
+        airport.setAirportName(dto.getAlternateIdent());
         return airport;
     }
 }

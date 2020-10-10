@@ -4,8 +4,8 @@ public class Airport {
 
     private String code;
     private String city;
-    private String alternate_ident;
-    private String airport_name;
+    private String alternateIdent;
+    private String airportName;
 
     public String getCode() {
         return code;
@@ -23,19 +23,19 @@ public class Airport {
         this.city = city;
     }
 
-    public String getAlternate_ident() {
-        return alternate_ident;
+    public String getAlternateIdent() {
+        return alternateIdent;
     }
 
-    public void setAlternate_ident(String alternate_ident) {
-        this.alternate_ident = alternate_ident;
+    public void setAlternateIdent(String alternateIdent) {
+        this.alternateIdent = alternateIdent;
     }
 
-    public String getAirport_name() {
-        return airport_name;
+    public String getAirportName() {
+        return airportName;
     }
 
-    public void setAirport_name(String airport_name) {
-        this.airport_name = airport_name;
+    public void setAirportName(String airportName) {
+        this.airportName = airportName;
     }
 }

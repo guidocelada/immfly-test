@@ -5,8 +5,6 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
-import java.util.Optional;
-
 @Configuration
 public class InterceptorsConfiguration implements WebMvcConfigurer {
 
@@ -14,14 +12,11 @@ public class InterceptorsConfiguration implements WebMvcConfigurer {
 
 
     public InterceptorsConfiguration(IncomingRequestsLogInterceptor incomingRequestsLogInterceptor) {
-
         this.incomingRequestsLogInterceptor = incomingRequestsLogInterceptor;
-
     }
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-
         registry.addInterceptor(incomingRequestsLogInterceptor);
     }
 }
