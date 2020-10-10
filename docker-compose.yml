@@ -1,0 +1,20 @@
+version: "3.8"
+services:
+  immfly-flights:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      - client.airplane-flights.base-url=http://wiremock:8080
+      - redis.host=redis
+      - redis.port=6379
+  redis:
+    image: "redis"
+    ports:
+      - "6379:6379"
+  wiremock:
+    image: "rodolpheche/wiremock"
+    ports:
+      - "8787:8080"
+    volumes:
+      - "$PWD/dev-external-services/wiremock:/home/wiremock"
