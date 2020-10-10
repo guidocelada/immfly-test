@@ -1,7 +1,7 @@
 package com.immfly.filghtinfo.service;
 
 import com.immfly.filghtinfo.client.AirplaneFlightsClient;
-import com.immfly.filghtinfo.client.dto.AirplaneFlightDTO;
+import com.immfly.filghtinfo.client.dto.FlightDTO;
 import com.immfly.filghtinfo.exception.AirplaneNotFoundException;
 import com.immfly.filghtinfo.exception.FlightNotFoundException;
 import com.immfly.filghtinfo.model.Flight;
@@ -20,7 +20,7 @@ public class FlightService {
     public Flight getFlight(String tailNumber, String flightNumber)
             throws AirplaneNotFoundException, FlightNotFoundException {
 
-        AirplaneFlightDTO flightDTO = client.get(tailNumber).stream()
+        FlightDTO flightDTO = client.get(tailNumber).stream()
                 .filter(airplaneInfo -> airplaneInfo.getFlightnumber().equals(flightNumber))
                 .findFirst()
                 .orElseThrow(() -> new FlightNotFoundException(flightNumber));

@@ -1,6 +1,6 @@
 package com.immfly.filghtinfo.client;
 
-import com.immfly.filghtinfo.client.dto.AirplaneFlightDTO;
+import com.immfly.filghtinfo.client.dto.FlightDTO;
 import com.immfly.filghtinfo.config.WebClientBuilderFactory;
 import com.immfly.filghtinfo.exception.AirplaneNotFoundException;
 import com.immfly.filghtinfo.exception.ExternalTimeoutException;
@@ -34,9 +34,9 @@ public class AirplaneFlightsClient {
     }
 
     @Cacheable(value = "FLIGHTS_BY_TAIL", key = "'FBT_' + #tailNumber")
-    public List<AirplaneFlightDTO> get(String tailNumber) throws AirplaneNotFoundException {
+    public List<FlightDTO> get(String tailNumber) throws AirplaneNotFoundException {
         try {
-            AirplaneFlightDTO[] response = webClient
+            FlightDTO[] response = webClient
                     .get()
                     .uri("/v1/flight-information-tail/" + tailNumber)
                     .retrieve()
@@ -46,7 +46,7 @@ public class AirplaneFlightsClient {
                     .onStatus(HttpStatus::isError, clientResponse -> {
                         throw new RuntimeException("There was a problem getting the airplane flights by tail number. (Error " + clientResponse.statusCode().value() + ")");
                     })
-                    .bodyToMono(AirplaneFlightDTO[].class)
+                    .bodyToMono(FlightDTO[].class)
                     .timeout(timeout)
                     .block();
 

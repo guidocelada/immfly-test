@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import java.io.Serializable;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class AirplaneFlightDTO implements Serializable {
+public class FlightDTO implements Serializable {
 
     private String ident;
     private String faFlightID;

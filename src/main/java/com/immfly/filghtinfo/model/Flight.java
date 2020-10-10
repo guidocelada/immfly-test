@@ -15,8 +15,8 @@ public class Flight {
     private Boolean blocked;
     private Boolean diverted;
     private Boolean cancelled;
-    private AirportDTO origin;
-    private AirportDTO destination;
+    private Airport origin;
+    private Airport destination;
 
     public String getIdent() {
         return ident;
@@ -106,19 +106,19 @@ public class Flight {
         this.cancelled = cancelled;
     }
 
-    public AirportDTO getOrigin() {
+    public Airport getOrigin() {
         return origin;
     }
 
-    public void setOrigin(AirportDTO origin) {
+    public void setOrigin(Airport origin) {
         this.origin = origin;
     }
 
-    public AirportDTO getDestination() {
+    public Airport getDestination() {
         return destination;
     }
 
-    public void setDestination(AirportDTO destination) {
+    public void setDestination(Airport destination) {
         this.destination = destination;
     }
 }
